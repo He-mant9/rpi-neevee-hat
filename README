@@ -1,0 +1,9 @@
+# NEEVEE Raspberry Pi Hat
+
+Hat contains huge set of peripherals below,
+1. RGB LED
+2. BH1745 Light Sensor
+3. MMA8652 Accelerometer
+4. Si7006 Temperature & Humidity Sensor
+5. TCA8418 Keypad Controller with 4x4 Keyboard matrix
+6. ST7735 based 1.4 Inch LCD Display
