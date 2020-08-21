@@ -8,23 +8,10 @@ class TCA8418:
     def __init__(self,bus_number=1):
         self.bus_number=bus_number
         self.bus=smbus.SMBus(self.bus_number)
-        #configuration register(0x01) setting
-        #(0x95) enables the following interrupts
-        #Auto Increment register enabled
-        #Interrupts enabled
-        #Keypad Lock Interrupt enabled
-        #Key Event Interrupt enabled
         self.bus.write_byte_data(0x34, 0x01, 0x95)  
-        #MAPPING KEYS
-        #KP_GPIO1,KP_GPIO2,KP_GPIO3 (0x1d,0x1e,0x1f) enables the 4x4 keys (1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34)
         self.bus.write_i2c_block_data(0x34,0x1d,self.key_map)
-        #SETTING UNLOCK KEY COMBINATIONS
         self.bus.write_byte_data(0x34,0x0f,0x21) #first  unlock key is 33(0x21)[key 4], UNLOCK1(0x0f) register
         self.bus.write_byte_data(0x34,0x10,0x01) #second unlock key is 1(0x01)[key D], UNLOCK2(0x10) register
-        #SETTING KEYPAD LOCK TIMERS
-        #KP_LCK_TIMER(0x0e)
-        #unlocking should happen in totally 10 seconds
-        #unlock_key_2 should be pressed within 2 seconds after pressing unlock_key_1
         self.bus.write_byte_data(0x34,0x0e,0x52)
     
     
@@ -37,13 +24,11 @@ class TCA8418:
     
     def setLockKeypad(self):
         #KEY LOCK AND EVENT COUNTER REGISTER(0x03)
-        #To manually LOCK the keypad below code works
         var=self.bus.read_byte_data(0x34,0x03)
         bit6=var | 0x40 #setting bit6 to 1
         self.bus.write_byte_data(0x34,0x03,bit6)
 
     def setUnlockKeypad(self):
-        #To manually unlock the keypad below code works
         var=self.bus.read_byte_data(0x34,0x03)
         bit6=var & 0x3f #setting bit6 to 0
         self.bus.write_byte_data(0x34,0x03,bit6)
