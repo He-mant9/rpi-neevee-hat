@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: E:\Projects\Accessory_shield\Rpi\hardware\design\Rpi_Peripheral_Hat_2205\RPI Shield\Circuit Studio Files\Design_Files\RPi_Peripheral_HAT.CSPcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.87
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

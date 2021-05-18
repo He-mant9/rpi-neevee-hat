@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: RPi_Peripheral_HAT.GBR   25-05-2020  22:59:23
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                Top Layer                               
+.GBL                Bottom Layer                            
+.GPB                Bottom Pad Master                       
+.GPT                Top Pad Master                          
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GKO                Keep-Out Layer                          
+.Outline            Outline                                 
+.Assembly Top       Assembly Top                            
+.3D Top             3D Top                                  
+.Courtyard Top      Courtyard Top                           
+.GML                Multi-Layer                             
+.1                  Dielectric 1                            
+.GD1                Drill Drawing                           
+.GG1                Drill Guide                             
+------------------------------------------------------------------------------------------
